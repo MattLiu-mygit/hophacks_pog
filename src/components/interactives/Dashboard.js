@@ -52,15 +52,13 @@ const Dashboard = (props) => {
     <>
       <div style={{ zIndex: '100000' }}>
         <div style={{ marginLeft: '3rem', zIndex: '100000' }}>
-        <img src = {infobutt}
-      style = {{
-        ...styles.interactive,}}/>
           <button
-            style={{ ...styles.interactive, zIndex: '100000' }}
+            style={{ ...styles.interactive, zIndex: '100000000' }}
             onClick={() => {
               setDashboardOpen(!dashboardOpen);
             }}
           >
+            <img src={infobutt} />
           </button>
 
           {dashboardOpen ? (
@@ -96,30 +94,34 @@ const Dashboard = (props) => {
               <div style={{ ...styles.dashboard, zIndex: '100000' }}>
                 {page === 1 ? (
                   <>
-                   <div style={{marginLeft: '5%', marginRight: '5%', }}>
-                    <p>Welcome to the stream!!!!</p>
-                    <p>
-                      We're taking you on a ride that will break your heart...
-                    </p>
-                    {countDown > 0 ? (
-                      <p>{countDown} until we take off...</p>
-                    ) : (
-                      <>
-                        <p>Now playing: {playing}</p> // replace with song info,
-                        "playing right now"
-                        <p>Playtime: </p>
-                      </>  
-                    )}
+                    <div style={{ marginLeft: '5%', marginRight: '5%' }}>
+                      <p>Welcome to the stream!!!!</p>
+                      <p>
+                        We're taking you on a ride that will break your heart...
+                      </p>
+                      {countDown > 0 ? (
+                        <p>{countDown} until we take off...</p>
+                      ) : (
+                        <>
+                          <p>Now playing: {playing}</p> // replace with song
+                          info, "playing right now"
+                          <p>Playtime: </p>
+                        </>
+                      )}
                     </div>
                   </>
                 ) : page === 2 ? (
                   <>
-                  <div style={{marginLeft: '5%', marginRight: '5%', }}> 
-                    <p>Rich Kim is a 19 year old singer, song writer, and producer based in Baltimore, MD. He's still looking for the one. DMs are open uwu X3.</p>
-                    <p>Socials:</p>
-                    <p>Instagram: </p>
-                    <p>Spotify:</p>
-                    <p>Youtube:</p>
+                    <div style={{ marginLeft: '5%', marginRight: '5%' }}>
+                      <p>
+                        Rich Kim is a 19 year old singer, song writer, and
+                        producer based in Baltimore, MD. He's still looking for
+                        the one. DMs are open uwu X3.
+                      </p>
+                      <p>Socials:</p>
+                      <p>Instagram: </p>
+                      <p>Spotify:</p>
+                      <p>Youtube:</p>
                     </div>
                   </>
                 ) : null}
@@ -155,7 +157,6 @@ const styles = {
     border: 'none',
     outline: 'none',
   },
-
 };
 
 export default Dashboard;

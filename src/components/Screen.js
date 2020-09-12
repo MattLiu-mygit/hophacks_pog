@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Dashboard from './interactives/Dashboard';
 import Strobelight from './interactives/Strobelight';
 import GeneratorApp from './interactives/generator/GeneratorApp';
+import ProgressApp from './interactives/ProgressApp';
 //import mp3Duration from 'mp3-duration';
 
 const Screen = () => {
@@ -21,14 +22,6 @@ const Screen = () => {
       {strobe ? <Strobelight strobe={strobe} /> : null}
 
       <button
-        styles={{
-          width: '5%',
-          height: '4%',
-          color: 'white',
-          backgroundColor: 'rgba(255, 255, 0, 0.5)',
-          marginLeft: '0rem',
-          position: 'absolute',
-        }}
         onClick={() => {
           setStrobe(!strobe);
         }}
@@ -40,21 +33,12 @@ const Screen = () => {
           marginLeft: '0rem',
           position: 'absolute',
           top: '78%',
+          zIndex: '9999999',
         }}
       >
         strobe
       </button>
-      {/* {sound ? (
-        <>
-          <Sound
-            url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-            playStatus={Sound.status.PLAYING}
-            // onLoading={handleSongLoading}
-            // onPlaying={handleSongPlaying}
-            // onFinishedPlaying={handleSongFinishedPlaying}
-          />
-        </>
-      ) : null} */}
+      <ProgressApp />
     </div>
   );
 };
