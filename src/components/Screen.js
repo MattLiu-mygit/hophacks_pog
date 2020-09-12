@@ -14,10 +14,12 @@ const Screen = () => {
   const [playing, setPlaying] = useState('Old McDonald');
 
   useEffect(() => {
-    if (started > 0) {
+    if (started > 0 && sound) {
       setTimeout(() => {
         setStarted(started - 1);
       }, 1000);
+    } else if (!sound) {
+      setStarted(372);
     }
   }, [started, sound]);
 
@@ -42,6 +44,14 @@ const Screen = () => {
         style={{ position: 'absolute', bottom: '0%' }}
       >
         Open sound
+      </button>
+      <button
+        onClick={() => {
+          setStrobe(!strobe);
+        }}
+        style={{ position: 'absolute', top: '50%' }}
+      >
+        strobe
       </button>
       {sound ? (
         <>

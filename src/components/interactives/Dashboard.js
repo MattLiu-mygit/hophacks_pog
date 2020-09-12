@@ -114,13 +114,6 @@ const Dashboard = (props) => {
                     <p>Instagram: </p>
                     <p>Spotify:</p>
                     <p>Youtube:</p>
-                    <button
-                      onClick={() => {
-                        props.setStrobe(!props.strobe);
-                      }}
-                    >
-                      strobe
-                    </button>
                   </>
                 ) : null}
               </div>
