@@ -25,12 +25,14 @@ const Screen = () => {
 
   return (
     <div>
-      <ProgressBar
-        started={sound}
-        timeLeft={started}
-        total={total}
-        song={playing}
-      />
+      {sound ? (
+        <ProgressBar
+          started={sound}
+          timeLeft={started}
+          total={total}
+          song={playing}
+        />
+      ) : null}
       <Dashboard
         setNightMode={setNightMode}
         setStrobe={setStrobe}
