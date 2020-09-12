@@ -63,12 +63,12 @@ const Screen = () => {
         }}
         style={{
         width: '5%',
-        height: '4%',
+        height: '8%',
         color: 'white',
         backgroundColor: 'rgba(255, 255, 0, 0.5)',
         marginLeft: '0rem',
         position: 'absolute',
-        top: '60%' }}
+        top: '78%' }}
       >
         strobe
       </button>

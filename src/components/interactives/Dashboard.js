@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 //import { setData, deleteData, getData } from '../../api/screensApi';
 //import axios from 'axios';
 //import OldMc from './OldMc.mp3';
+import infobutt from './InformationButton.png';
 
 const Dashboard = (props) => {
   const [dashboardOpen, setDashboardOpen] = useState(false);
@@ -51,13 +52,15 @@ const Dashboard = (props) => {
     <>
       <div style={{ zIndex: '100000' }}>
         <div style={{ marginLeft: '3rem', zIndex: '100000' }}>
+        <img src = {infobutt}
+      style = {{
+        ...styles.interactive,}}/>
           <button
             style={{ ...styles.interactive, zIndex: '100000' }}
             onClick={() => {
               setDashboardOpen(!dashboardOpen);
             }}
           >
-            ButtonOpen
           </button>
 
           {dashboardOpen ? (
@@ -66,8 +69,8 @@ const Dashboard = (props) => {
                 style={{
                   ...styles.interactive,
                   backgroundColor: `${highlight1}`,
-                  marginLeft: '70rem',
-                  top: '25%',
+                  marginLeft: '69.8rem',
+                  top: '24%',
                   zIndex: '100000',
                 }}
                 onClick={() => {
@@ -80,8 +83,8 @@ const Dashboard = (props) => {
                 style={{
                   ...styles.interactive,
                   backgroundColor: `${highlight2}`,
-                  marginLeft: '64.5rem',
-                  top: '25%',
+                  marginLeft: '66.7rem',
+                  top: '24%',
                   zIndex: '100000',
                 }}
                 onClick={() => {
@@ -134,19 +137,23 @@ const styles = {
     width: '25%',
     height: '50%',
     color: 'white',
-    backgroundColor: 'rgba(255, 255, 0, 0.5)',
-    marginLeft: '55.7rem',
+    backgroundColor: 'rgba(165, 55, 253, .7)',
+    marginLeft: '53rem',
     position: 'absolute',
-    top: '30%',
+    top: '30.75%',
+    border: 'none',
+    outline: 'none',
   },
   interactive: {
-    width: '7%',
-    height: '5%',
+    width: '4%',
+    height: '7%',
     color: 'white',
-    backgroundColor: 'rgba(0, 255, 255, 0.75)',
-    marginLeft: '70rem',
+    backgroundColor: 'transparent',
+    marginLeft: '73rem',
     position: 'absolute',
-    top: '80%',
+    top: '81%',
+    border: 'none',
+    outline: 'none',
   },
 
 };

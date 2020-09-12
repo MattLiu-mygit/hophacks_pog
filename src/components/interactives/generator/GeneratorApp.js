@@ -9,9 +9,12 @@ const GeneratorApp = () => {
   const [generatorNum, setGeneratorNum] = useState(0);
   return (
     <div>
+      <img src = {model1}
+      style = {{
+        ...styles.generator, top: '58%'}}/>
       <button
       style = {{
-        ...styles.generator, top: '80%',
+        ...styles.generator, top: '58%',
       }}
         onClick={() => {
           if (generatorNum != 1) {
@@ -21,11 +24,13 @@ const GeneratorApp = () => {
           }
         }}
       >
-        generate heart
       </button>
+      <img src = {poppedHand}
+      style = {{
+        ...styles.generator, top: '68%'}}/>
       <button
       style = {{
-        ...styles.generator, top: '70%',
+        ...styles.generator, top: '68%',
 
       }}
         onClick={() => {
@@ -36,7 +41,6 @@ const GeneratorApp = () => {
           }
         }}
       >
-        generate hand
       </button>
       {generatorNum === 1 ? (
         <>
@@ -62,11 +66,13 @@ const GeneratorApp = () => {
 const styles = {
   generator: {
     width: '5%',
-    height: '4%',
+    height: '8%',
     color: 'white',
-    backgroundColor: 'rgba(255, 255, 0, 0.5)',
+    backgroundColor: 'transparent',
     marginLeft: '0rem',
     position: 'absolute',
+    border: 'none',
+    outline: 'none',
   },
 }
 
