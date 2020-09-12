@@ -10,6 +10,9 @@ const GeneratorApp = () => {
   return (
     <div>
       <button
+      style = {{
+        ...styles.generator, top: '80%',
+      }}
         onClick={() => {
           if (generatorNum != 1) {
             setGeneratorNum(1);
@@ -21,6 +24,10 @@ const GeneratorApp = () => {
         generate heart
       </button>
       <button
+      style = {{
+        ...styles.generator, top: '70%',
+
+      }}
         onClick={() => {
           if (generatorNum != 2) {
             setGeneratorNum(2);
@@ -51,5 +58,16 @@ const GeneratorApp = () => {
     </div>
   );
 };
+
+const styles = {
+  generator: {
+    width: '5%',
+    height: '4%',
+    color: 'white',
+    backgroundColor: 'rgba(255, 255, 0, 0.5)',
+    marginLeft: '0rem',
+    position: 'absolute',
+  },
+}
 
 export default GeneratorApp;

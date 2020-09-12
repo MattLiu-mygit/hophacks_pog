@@ -93,7 +93,8 @@ const Dashboard = (props) => {
               <div style={{ ...styles.dashboard, zIndex: '100000' }}>
                 {page === 1 ? (
                   <>
-                    <p>Welcome and get HYPED!!!!</p>
+                   <div style={{marginLeft: '5%', marginRight: '5%', }}>
+                    <p>Welcome to the stream!!!!</p>
                     <p>
                       We're taking you on a ride that will break your heart...
                     </p>
@@ -104,16 +105,19 @@ const Dashboard = (props) => {
                         <p>Now playing: {playing}</p> // replace with song info,
                         "playing right now"
                         <p>Playtime: </p>
-                      </>
+                      </>  
                     )}
+                    </div>
                   </>
                 ) : page === 2 ? (
                   <>
-                    <p>Rich Kim is a Korean-American rapper based in Baltimore, MD. He is a singer, song writer, and producer.</p>
+                  <div style={{marginLeft: '5%', marginRight: '5%', }}> 
+                    <p>Rich Kim is a 19 year old singer, song writer, and producer based in Baltimore, MD. He's still looking for the one. DMs are open uwu X3.</p>
                     <p>Socials:</p>
                     <p>Instagram: </p>
                     <p>Spotify:</p>
                     <p>Youtube:</p>
+                    </div>
                   </>
                 ) : null}
               </div>
@@ -144,6 +148,7 @@ const styles = {
     position: 'absolute',
     top: '80%',
   },
+
 };
 
 export default Dashboard;

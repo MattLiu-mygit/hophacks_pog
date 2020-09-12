@@ -50,10 +50,25 @@ const Screen = () => {
         Open sound
       </button>
       <button
+      styles = {{
+        width: '5%',
+        height: '4%',
+        color: 'white',
+        backgroundColor: 'rgba(255, 255, 0, 0.5)',
+        marginLeft: '0rem',
+        position: 'absolute',
+      }}
         onClick={() => {
           setStrobe(!strobe);
         }}
-        style={{ position: 'absolute', top: '50%' }}
+        style={{
+        width: '5%',
+        height: '4%',
+        color: 'white',
+        backgroundColor: 'rgba(255, 255, 0, 0.5)',
+        marginLeft: '0rem',
+        position: 'absolute',
+        top: '60%' }}
       >
         strobe
       </button>
