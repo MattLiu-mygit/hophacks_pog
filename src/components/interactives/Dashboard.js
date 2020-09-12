@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 //import { setData, deleteData, getData } from '../../api/screensApi';
 //import axios from 'axios';
+//import OldMc from './OldMc.mp3';
 
 const Dashboard = (props) => {
   const [dashboardOpen, setDashboardOpen] = useState(false);
@@ -113,13 +114,6 @@ const Dashboard = (props) => {
                     <p>Instagram: </p>
                     <p>Spotify:</p>
                     <p>Youtube:</p>
-                    <button
-                      onClick={() => {
-                        props.setStrobe(!props.strobe);
-                      }}
-                    >
-                      strobe
-                    </button>
                   </>
                 ) : null}
               </div>
