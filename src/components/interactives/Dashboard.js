@@ -66,7 +66,7 @@ const Dashboard = (props) => {
                   ...styles.interactive,
                   backgroundColor: `${highlight1}`,
                   marginLeft: '70rem',
-                  top: '75%',
+                  top: '25%',
                   zIndex: '100000',
                 }}
                 onClick={() => {
@@ -79,8 +79,8 @@ const Dashboard = (props) => {
                 style={{
                   ...styles.interactive,
                   backgroundColor: `${highlight2}`,
-                  marginLeft: '70rem',
-                  top: '70%',
+                  marginLeft: '64.5rem',
+                  top: '25%',
                   zIndex: '100000',
                 }}
                 onClick={() => {
@@ -108,7 +108,7 @@ const Dashboard = (props) => {
                   </>
                 ) : page === 2 ? (
                   <>
-                    <p>Hello! I'm Richard Kim! Check out my spotify here!</p>
+                    <p>Rich Kim is a Korean-American rapper based in Baltimore, MD. He is a singer, song writer, and producer.</p>
                     <p>Socials:</p>
                     <p>Instagram: </p>
                     <p>Spotify:</p>
@@ -137,9 +137,9 @@ const styles = {
     height: '50%',
     color: 'white',
     backgroundColor: 'rgba(255, 255, 0, 0.5)',
-    marginLeft: '50rem',
+    marginLeft: '55.7rem',
     position: 'absolute',
-    top: '25%',
+    top: '30%',
   },
   interactive: {
     width: '7%',
