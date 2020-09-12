@@ -65,7 +65,8 @@ const Dashboard = (props) => {
                 style={{
                   ...styles.interactive,
                   backgroundColor: `${highlight1}`,
-                  marginLeft: '3rem',
+                  marginLeft: '70rem',
+                  top: '75%',
                   zIndex: '100000',
                 }}
                 onClick={() => {
@@ -78,7 +79,8 @@ const Dashboard = (props) => {
                 style={{
                   ...styles.interactive,
                   backgroundColor: `${highlight2}`,
-                  marginLeft: '6rem',
+                  marginLeft: '70rem',
+                  top: '70%',
                   zIndex: '100000',
                 }}
                 onClick={() => {
@@ -135,18 +137,18 @@ const styles = {
     height: '50%',
     color: 'white',
     backgroundColor: 'rgba(255, 255, 0, 0.5)',
-    marginLeft: '-0.5rem',
+    marginLeft: '50rem',
     position: 'absolute',
     top: '25%',
   },
   interactive: {
-    width: '5%',
+    width: '7%',
     height: '5%',
     color: 'white',
     backgroundColor: 'rgba(0, 255, 255, 0.75)',
-    marginLeft: '-0.5rem',
+    marginLeft: '70rem',
     position: 'absolute',
-    top: '20%',
+    top: '80%',
   },
 };
 
