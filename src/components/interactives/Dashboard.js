@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+//import { setData, deleteData, getData } from '../../api/screensApi';
+//import axios from 'axios';
 
 const Dashboard = (props) => {
   const [dashboardOpen, setDashboardOpen] = useState(false);
@@ -6,13 +8,33 @@ const Dashboard = (props) => {
   const [page, setPage] = useState(1);
   const [highlight1, setHighlight1] = useState('rgba(0, 0, 0, 0.75)');
   const [highlight2, setHighlight2] = useState('rgba(0, 255, 255, 0.75)');
+  const [playing, setPlaying] = useState('Old McDonald');
+
+  // const getCountDown = async () => {
+  //   return await getData();
+  // };
   useEffect(() => {
+    //let countDown = 10;
+    // getData().then((value) => {
+    //   countDown = value[0];
+    //   console.log(countDown);
+    // });
+    //deleteData();
     if (countDown > 0) {
       setTimeout(() => {
         setCountDown(countDown - 1);
+        //axios.delete('http://localhost:8081/api/screens', { countDown: 300 });
+        // setData({
+        //   id: 1,
+        //   hearts: [],
+        //   countDown: 69,
+        //   __vs: 0,
+        //   _id: '5f5c61e1ab3f4e2f88789a66',
+        // });
       }, 1000);
     } else {
       // code for initiating starting sequence
+      // Smoke, lights,
     }
 
     if (page === 1) {
@@ -22,65 +44,86 @@ const Dashboard = (props) => {
       setHighlight2('rgba(0, 0, 0, 0.75)');
       setHighlight1('rgba(0, 255, 255, 0.75)');
     }
-  }, [countDown, page]);
+  }, [page, countDown]);
 
   return (
     <>
-      <div style={{ marginLeft: '3rem', zIndex: '100000' }}>
-        <button
-          style={{ ...styles.interactive, zIndex: '100000' }}
-          onClick={() => {
-            setDashboardOpen(!dashboardOpen);
-          }}
-        >
-          ButtonOpen
-        </button>
+      <div style={{ zIndex: '100000' }}>
+        <div style={{ marginLeft: '3rem', zIndex: '100000' }}>
+          <button
+            style={{ ...styles.interactive, zIndex: '100000' }}
+            onClick={() => {
+              setDashboardOpen(!dashboardOpen);
+            }}
+          >
+            ButtonOpen
+          </button>
 
-        {dashboardOpen ? (
-          <>
-            <button
-              style={{
-                ...styles.interactive,
-                backgroundColor: `${highlight1}`,
-                marginLeft: '3rem',
-                zIndex: '100000',
-              }}
-              onClick={() => {
-                setPage(1);
-              }}
-            >
-              Page1
-            </button>
-            <button
-              style={{
-                ...styles.interactive,
-                backgroundColor: `${highlight2}`,
-                marginLeft: '6rem',
-                zIndex: '100000',
-              }}
-              onClick={() => {
-                setPage(2);
-              }}
-            >
-              Page2
-            </button>
-            <div style={{ ...styles.dashboard, zIndex: '100000' }}>
-              {page === 1 ? (
-                <>
-                  <p>Welcome and get HYPED!!!!</p>
-                  <p>
-                    We're taking you on a ride that will break your heart...
-                  </p>
-                  {countDown > 0 ? (
-                    <p>{countDown} until we take off...</p>
-                  ) : (
-                    <p>Welcome to the show....</p>
-                  )}
-                </>
-              ) : null}
-            </div>
-          </>
-        ) : null}
+          {dashboardOpen ? (
+            <>
+              <button
+                style={{
+                  ...styles.interactive,
+                  backgroundColor: `${highlight1}`,
+                  marginLeft: '3rem',
+                  zIndex: '100000',
+                }}
+                onClick={() => {
+                  setPage(1);
+                }}
+              >
+                Page1
+              </button>
+              <button
+                style={{
+                  ...styles.interactive,
+                  backgroundColor: `${highlight2}`,
+                  marginLeft: '6rem',
+                  zIndex: '100000',
+                }}
+                onClick={() => {
+                  setPage(2);
+                }}
+              >
+                Page2
+              </button>
+              <div style={{ ...styles.dashboard, zIndex: '100000' }}>
+                {page === 1 ? (
+                  <>
+                    <p>Welcome and get HYPED!!!!</p>
+                    <p>
+                      We're taking you on a ride that will break your heart...
+                    </p>
+                    {countDown > 0 ? (
+                      <p>{countDown} until we take off...</p>
+                    ) : (
+                      <>
+                        <p>Now playing: {playing}</p> // replace with song info,
+                        "playing right now"
+                        <p>Playtime: </p>
+                      </>
+                    )}
+                  </>
+                ) : page === 2 ? (
+                  <>
+                    <p>Hello! I'm Richard Kim! Check out my spotify here!</p>
+                    <p>Socials:</p>
+                    <p>Instagram: </p>
+                    <p>Spotify:</p>
+                    <p>Youtube:</p>
+                    <button
+                      onClick={() => {
+                        props.setStrobe(!props.strobe);
+                      }}
+                    >
+                      strobe
+                    </button>
+                  </>
+                ) : null}
+              </div>
+            </>
+          ) : null}
+        </div>
       </div>
     </>
   );
