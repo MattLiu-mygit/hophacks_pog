@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
-import Generator from '../Generator';
-import model1 from '../heart.png';
-import poppedHeart from '../blackHeart.png';
-import hand from '../hand.png';
-import poppedHand from '../poppedHand.png';
+import Generator from './Generator';
+import model1 from './heart.png';
+import poppedHeart from './blackHeart.png';
+import hand from './hand.png';
+import poppedHand from './poppedHand.png';
 
 const GeneratorApp = () => {
   const [generatorNum, setGeneratorNum] = useState(0);
   return (
     <div>
-      <img src = {model1}
-      style = {{
-        ...styles.generator, top: '58%'}}/>
+      <img
+        src={model1}
+        style={{
+          ...styles.generator,
+          top: '58%',
+        }}
+      />
       <button
-      style = {{
-        ...styles.generator, top: '58%',
-      }}
+        style={{
+          ...styles.generator,
+          top: '58%',
+        }}
         onClick={() => {
           if (generatorNum != 1) {
             setGeneratorNum(1);
@@ -23,16 +28,13 @@ const GeneratorApp = () => {
             setGeneratorNum(0);
           }
         }}
-      >
-      </button>
-      <img src = {poppedHand}
-      style = {{
-        ...styles.generator, top: '68%'}}/>
-      <button
-      style = {{
-        ...styles.generator, top: '68%',
+      ></button>
 
-      }}
+      <button
+        style={{
+          ...styles.generator,
+          top: '68%',
+        }}
         onClick={() => {
           if (generatorNum != 2) {
             setGeneratorNum(2);
@@ -41,6 +43,7 @@ const GeneratorApp = () => {
           }
         }}
       >
+        <img src={poppedHand} style={{ width: '100%' }} />
       </button>
       {generatorNum === 1 ? (
         <>
@@ -73,7 +76,8 @@ const styles = {
     position: 'absolute',
     border: 'none',
     outline: 'none',
+    zIndex: '99999999',
   },
-}
+};
 
 export default GeneratorApp;
