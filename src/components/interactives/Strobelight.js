@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import cloud from './cloud.gif';
+//import OldMc from './OldMc.mp3';
 
 const Strobelight = (props) => {
   const [strobe, setStrobe] = useState(true);
