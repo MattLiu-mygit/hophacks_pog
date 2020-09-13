@@ -40,11 +40,11 @@ const Dashboard = (props) => {
     }
 
     if (page === 1) {
-      setHighlight2('rgba(0, 255, 255, 0.35)');
-      setHighlight1('rgba(0, 255, 255, 0.75)');
+      setHighlight2('rgba(231, 149, 237, 0.35)');
+      setHighlight1('rgba(231, 149, 237, 0.75)');
     } else if (page === 2) {
-      setHighlight1('rgba(0, 255, 255, 0.35)');
-      setHighlight2('rgba(0, 255, 255, 0.75)');
+      setHighlight1('rgba(231, 149, 237, 0.35)');
+      setHighlight2('rgba(231, 149, 237, 0.75)');
     }
   }, [page, countDown]);
 
@@ -99,13 +99,21 @@ const Dashboard = (props) => {
               <div style={{ ...styles.dashboard, zIndex: '100000' }}>
                 {page === 1 ? (
                   <>
-                    <div style={{ marginLeft: '6%', marginRight: '5%' }}>
-                      <p>Welcome to the stream!!!!</p>
-                      <p>
-                        We're taking you on a ride that will break your heart...
+                    <div style={{ marginLeft: '5%', marginRight: '5%', fontFamily:'Trebuchet MS, sans-serif' }}>
+                      <h3 style={{fontWeight: 'bold'}}>
+                      Welcome to Rich Kim's Live Performance!
+                      </h3>
+                      <p style={{textAlign:'center'}}>
+                        Prepare yourself for an event filled with hype and heartbreak.
+                        Only...
                       </p>
                       {countDown > 0 ? (
-                        <p style={{textAlign:'center'}}>{countDown} until we take off...</p>
+                        <p style={{textAlign:'center'}}>
+                          <span style={{fontSize:'5rem'}}>{countDown}</span> 
+                          <div> 
+                          until we take off...
+                          </div>
+                          </p>
                       ) : (
                         <>
                           <p>Now playing: {playing}</p> // replace with song
@@ -117,16 +125,19 @@ const Dashboard = (props) => {
                   </>
                 ) : page === 2 ? (
                   <>
-                    <div style={{ marginLeft: '6%', marginRight: '5%' }}>
+                    <div style={{ marginLeft: '5%', marginRight: '6%' }}>
                       <p>
                         Rich Kim is a 19 year old singer, song writer, and
                         producer based in Baltimore, MD. He's still looking for
                         the one. DMs are open uwu X3.
                       </p>
-                      <p>Socials:</p>
-                      <p>Instagram: </p>
-                      <p>Spotify:</p>
-                      <p>Youtube:</p>
+                      <p style = {{textAlign:'center'}}> 
+                        <h3 style={{textDecoration:'underline'}}>Featured Songs</h3>
+                          <p>Goldfish   3:02</p>
+                          <p>Bye        10:34</p>
+                          <p>Are you Fine?  15:58</p>
+                          <p>Bubbly      21:32</p>
+                      </p>
                     </div>
                   </>
                 ) : null}
