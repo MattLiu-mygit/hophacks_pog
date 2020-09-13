@@ -6,6 +6,7 @@ import hand from './hand.png';
 import poppedHand from './poppedHand.png';
 import flames from './Fire.gif';
 import purple from './purple.png';
+import explosion from './FireExplosion.gif';
 
 const GeneratorApp = () => {
   const [generatorNum, setGeneratorNum] = useState(0);
@@ -18,6 +19,7 @@ const GeneratorApp = () => {
           ...styles.generator,
           top: '58%',
           width: `${width1}%`,
+          zIndex: '99999999999',
         }}
         onClick={() => {
           setWidth1(4);
@@ -39,6 +41,7 @@ const GeneratorApp = () => {
           ...styles.generator,
           top: '68%',
           width: `${width2}%`,
+          zIndex: '99999999999',
         }}
         onClick={() => {
           setWidth2(4);
@@ -61,14 +64,18 @@ const GeneratorApp = () => {
           <Generator pic={model1} popped={poppedHeart} />
           <Generator pic={model1} popped={poppedHeart} />
           <Generator pic={model1} popped={poppedHeart} />
+          <Generator pic={model1} popped={poppedHeart} />
+          <Generator pic={model1} popped={poppedHeart} />
+          <Generator pic={model1} popped={poppedHeart} />
         </>
       ) : generatorNum === 2 ? (
         <>
-          <Generator pic={purple} popped={poppedHand} />
-          <Generator pic={flames} popped={hand} />
-          <Generator pic={hand} popped={poppedHand} />
-          <Generator pic={poppedHand} popped={hand} />
-          <Generator pic={flames} popped={hand} />
+          <Generator pic={purple} popped={explosion} />
+          <Generator pic={flames} popped={explosion} />
+          <Generator pic={hand} popped={explosion} />
+          <Generator pic={poppedHand} popped={explosion} />
+          <Generator pic={flames} popped={explosion} />
+          <Generator pic={hand} popped={explosion} />
         </>
       ) : null}
     </div>

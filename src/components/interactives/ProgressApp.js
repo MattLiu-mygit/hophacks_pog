@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProgressBar from './ProgressBar';
+import bars from './BarGraph.png';
 
 const ProgressApp = () => {
   const [started, setStarted] = useState(30);
@@ -75,6 +76,7 @@ const ProgressApp = () => {
               position: 'absolute',
               bottom: '0%',
               opacity: '60%',
+              left: '0%',
             }}
           ></canvas>
         </div>
@@ -93,9 +95,17 @@ const ProgressApp = () => {
         onClick={() => {
           setSound(!sound);
         }}
-        style={{ position: 'absolute', bottom: '0%', zIndex: '1000000000' }}
+        style={{
+          position: 'absolute',
+          bottom: '0%',
+          zIndex: '1000000000',
+          backgroundColor: 'transparent',
+          height: '15%',
+          border: 'none',
+          outline: 'none',
+        }}
       >
-        Open sound
+        <img src={bars} />
       </button>
     </>
   );

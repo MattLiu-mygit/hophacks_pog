@@ -3,11 +3,13 @@ import Dashboard from './interactives/Dashboard';
 import Strobelight from './interactives/Strobelight';
 import GeneratorApp from './interactives/generator/GeneratorApp';
 import ProgressApp from './interactives/ProgressApp';
+import strobelight from './Strobe.png';
 //import mp3Duration from 'mp3-duration';
 
 const Screen = () => {
   const [nightMode, setNightMode] = useState(false);
   const [strobe, setStrobe] = useState(false);
+  const [width, setWidth] = useState(5);
 
   return (
     <div>
@@ -36,21 +38,34 @@ const Screen = () => {
         <button
           onClick={() => {
             setStrobe(!strobe);
+            setWidth(4);
+            setTimeout(() => {
+              setWidth(5);
+            }, 100);
           }}
           style={{
-            width: '5%',
+            width: `${width}%`,
             height: '5%',
             color: 'white',
-            backgroundColor: 'rgba(50, 18, 122, 0.5)',
+            //backgroundColor: 'rgba(50, 18, 122, 0.5)',
             marginLeft: '0rem',
             position: 'absolute',
             top: '78%',
-            zIndex: '9999999',
-            borderRadius: '12px',
-            borderColor: '#ff0090',
+            zIndex: '99999999999',
+            //borderRadius: '12px',
+            //borderColor: '#ff0090',
+            backgroundColor: 'transparent',
+            border: 'none',
+            outline: 'none',
           }}
         >
-          strobe
+          <img
+            src={strobelight}
+            style={{
+              zIndex: '9999999',
+              width: '100%',
+            }}
+          />
         </button>
         <ProgressApp />
       </div>

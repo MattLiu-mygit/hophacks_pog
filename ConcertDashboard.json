@@ -22,17 +22,17 @@
       "configurationAnchor": "panel",
       "displayChannelName": "echooooooooooooooooooo",
       "features": {
-        "isBitsEnabled": true,
-        "isChatEnabled": true,
-        "isSubscriptionStatusAvailable": true
+        "isBitsEnabled": false,
+        "isChatEnabled": false,
+        "isSubscriptionStatusAvailable": false
       },
       "frameSize": {
-        "width": 1280,
-        "height": 720
+        "width": 1600,
+        "height": 900
       },
       "id": "1",
       "isPopout": false,
-      "label": "main view",
+      "label": "adsf",
       "linked": false,
       "linkedUserId": "",
       "orientation": "Portrait",
@@ -41,7 +41,7 @@
     },
     {
       "channelId": "173673455",
-      "configurationAnchor": "video_overlay",
+      "configurationAnchor": "panel",
       "displayChannelName": "echooooooooooooooooooo",
       "features": {
         "isBitsEnabled": false,
@@ -54,12 +54,12 @@
       },
       "id": "2",
       "isPopout": false,
-      "label": "Live config",
-      "linked": true,
-      "linkedUserId": "265737932",
+      "label": "adsf",
+      "linked": false,
+      "linkedUserId": "",
       "orientation": "Portrait",
-      "type": "config",
-      "viewerType": "Broadcaster"
+      "type": "video_overlay",
+      "viewerType": "Logged-In Viewer"
     }
   ],
   "manifest": {
@@ -70,7 +70,7 @@
     "canInstall": true,
     "configUrl": "https://localhost:8080/config.html",
     "configurationLocation": "none",
-    "description": "",
+    "description": "A concert Extension!",
     "eulaTosUrl": "",
     "hasChatSupport": false,
     "iconUrl": "",
@@ -87,7 +87,7 @@
     "sku": "",
     "state": "Testing",
     "subscriptionsSupportLevel": "none",
-    "summary": "",
+    "summary": "Concert Extension!",
     "supportEmail": "sgrtcat@gmail.com",
     "vendorCode": "",
     "version": "0.0.1",
@@ -135,7 +135,7 @@
     "whitelistedPanelUrls": []
   },
   "frontendCommand": "npm start",
-  "frontendFolderName": "src",
+  "frontendFolderName": "C:\\Users\\MatthewNJ\\hophacks_glasses",
   "name": "ConcertDashboard",
   "version": 2
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import loading from './loading.gif';
+import goldfish from './goldfish.jpg';
 
 const ProgressBar = (props) => {
   const [progressDescription, setProgressDescription] = useState(false);
@@ -67,11 +68,26 @@ const ProgressBar = (props) => {
         <div
           style={{
             position: 'absolute',
-            top: '5rem',
-            backgroundColor: 'red',
+            top: '3rem',
+            //backgroundColor: 'rgba(165, 55, 253, .7)',
+            color: 'white',
+            background:
+              'linear-gradient(90deg, rgba(27, 4, 124, 1), rgba(165, 55, 253, 1))',
+            left: '2rem',
+            padding: '0.75rem',
+            borderRadius: '2px',
+            width: '40%',
           }}
         >
-          BAKJSFLASKDH
+          <img
+            src={goldfish}
+            style={{ float: 'left', width: '20%', marginRight: '1rem' }}
+          />
+          <p>Goldfish - Stemo ft. Richard Kim</p>
+          <p>
+            Stemo and Rick Kim team up for a song of lost love and self
+            reflection.
+          </p>
         </div>
       ) : null}
     </div>
