@@ -97,15 +97,15 @@ const ProgressApp = () => {
         }}
         style={{
           position: 'absolute',
-          bottom: '0%',
-          zIndex: '1000000000',
+          top: '20%',
+          right: '-2.5%',
+          zIndex: '100000000',
           backgroundColor: 'transparent',
-          height: '15%',
           border: 'none',
           outline: 'none',
         }}
       >
-        <img src={bars} />
+        <img src={bars} style={{ width: '40%' }} />
       </button>
     </>
   );
