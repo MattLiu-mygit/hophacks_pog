@@ -27,28 +27,6 @@
         "isSubscriptionStatusAvailable": false
       },
       "frameSize": {
-        "width": 1600,
-        "height": 900
-      },
-      "id": "1",
-      "isPopout": false,
-      "label": "adsf",
-      "linked": false,
-      "linkedUserId": "",
-      "orientation": "Portrait",
-      "type": "video_overlay",
-      "viewerType": "Broadcaster"
-    },
-    {
-      "channelId": "173673455",
-      "configurationAnchor": "panel",
-      "displayChannelName": "echooooooooooooooooooo",
-      "features": {
-        "isBitsEnabled": false,
-        "isChatEnabled": false,
-        "isSubscriptionStatusAvailable": false
-      },
-      "frameSize": {
         "width": 1280,
         "height": 720
       },
