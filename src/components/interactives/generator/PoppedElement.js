@@ -12,6 +12,7 @@ const PoppedHeart = (props) => {
         src={props.popped}
         style={{
           width: '5vw',
+          opacity: '85%',
         }}
       />
     </div>

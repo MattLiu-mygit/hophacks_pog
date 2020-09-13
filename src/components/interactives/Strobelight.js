@@ -40,7 +40,6 @@ const Strobelight = (props) => {
         left: '0%',
       }}
     >
-      Hello
       <img
         src={cloud}
         style={{
@@ -81,7 +80,7 @@ const Strobelight = (props) => {
               backgroundColor: 'blue',
               height: '300%',
               width: '2.5%',
-              transform: `rotate(${angle + 15}+15deg)`,
+              transform: `rotate(${angle + 15}deg)`,
               position: 'absolute',
               left: '25%',
               opacity: '70%',

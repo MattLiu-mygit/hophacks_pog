@@ -40,11 +40,11 @@ const Dashboard = (props) => {
     }
 
     if (page === 1) {
-      setHighlight1('rgba(0, 0, 0, 0.75)');
-      setHighlight2('rgba(0, 255, 255, 0.75)');
-    } else if (page === 2) {
-      setHighlight2('rgba(0, 0, 0, 0.75)');
+      setHighlight2('rgba(0, 255, 255, 0.35)');
       setHighlight1('rgba(0, 255, 255, 0.75)');
+    } else if (page === 2) {
+      setHighlight1('rgba(0, 255, 255, 0.35)');
+      setHighlight2('rgba(0, 255, 255, 0.75)');
     }
   }, [page, countDown]);
 
@@ -67,40 +67,42 @@ const Dashboard = (props) => {
                 style={{
                   ...styles.interactive,
                   backgroundColor: `${highlight1}`,
-                  marginLeft: '69.8rem',
-                  top: '24%',
+                  right: '1%',
+                  top: '50%',
+                  borderRadius: "10px 100px / 120px",
                   zIndex: '100000',
                 }}
                 onClick={() => {
                   setPage(1);
                 }}
               >
-                Page1
+                1
               </button>
               <button
                 style={{
                   ...styles.interactive,
                   backgroundColor: `${highlight2}`,
-                  marginLeft: '66.7rem',
-                  top: '24%',
+                  right: '1%',
+                  top: '58%',
+                  borderRadius: "10px 100px / 120px",
                   zIndex: '100000',
                 }}
                 onClick={() => {
                   setPage(2);
                 }}
               >
-                Page2
+                2
               </button>
               <div style={{ ...styles.dashboard, zIndex: '100000' }}>
                 {page === 1 ? (
                   <>
-                    <div style={{ marginLeft: '5%', marginRight: '5%' }}>
+                    <div style={{ marginLeft: '6%', marginRight: '5%' }}>
                       <p>Welcome to the stream!!!!</p>
                       <p>
                         We're taking you on a ride that will break your heart...
                       </p>
                       {countDown > 0 ? (
-                        <p>{countDown} until we take off...</p>
+                        <p style={{textAlign:'center'}}>{countDown} until we take off...</p>
                       ) : (
                         <>
                           <p>Now playing: {playing}</p> // replace with song
@@ -112,7 +114,7 @@ const Dashboard = (props) => {
                   </>
                 ) : page === 2 ? (
                   <>
-                    <div style={{ marginLeft: '5%', marginRight: '5%' }}>
+                    <div style={{ marginLeft: '6%', marginRight: '5%' }}>
                       <p>
                         Rich Kim is a 19 year old singer, song writer, and
                         producer based in Baltimore, MD. He's still looking for
@@ -141,7 +143,7 @@ const styles = {
     color: 'white',
     borderRadius: "10px 100px / 120px",
     backgroundColor: 'rgba(165, 55, 253, .7)',
-    right: '5%',
+    right: '6%',
     position: 'absolute',
     top: '20%',
     border: 'none',
@@ -151,6 +153,7 @@ const styles = {
     width: '4%',
     height: '7%',
     color: 'white',
+    textAlign: 'center',
     backgroundColor: 'transparent',
     right:'1%',
     position: 'absolute',
