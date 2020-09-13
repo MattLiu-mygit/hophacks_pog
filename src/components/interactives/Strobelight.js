@@ -65,43 +65,55 @@ const Strobelight = (props) => {
         <>
           <div
             style={{
-              backgroundColor: 'white',
+              backgroundColor: '#B20DED',
+              height: '350%',
+              width: '2.5%',
+              transform: `rotate(${angle - 15}deg)`,
+              position: 'absolute',
+              left: '25%',
+              opacity: '70%',
+              bottom: '-175%',
+            }}
+          ></div>
+          <div
+            style={{
+              backgroundColor: '#4E5AC7',
               height: '300%',
               width: '2.5%',
               transform: `rotate(${angle}deg)`,
               position: 'absolute',
               left: '25%',
-              opacity: '20%',
+              opacity: '90%',
               bottom: '-150%',
             }}
           ></div>
           <div
             style={{
-              backgroundColor: 'blue',
-              height: '300%',
+              backgroundColor: '#B20DED',
+              height: '350%',
               width: '2.5%',
               transform: `rotate(${angle + 15}deg)`,
               position: 'absolute',
               left: '25%',
               opacity: '70%',
-              bottom: '-150%',
+              bottom: '-175%',
             }}
           ></div>
           <div
             style={{
-              backgroundColor: 'red',
-              height: '300%',
+              backgroundColor: '#B20DED',
+              height: '350%',
               width: '2.5%',
               transform: `rotate(-${angle + 15}deg)`,
               position: 'absolute',
               right: '25%',
-              opacity: '50%',
-              bottom: '-150%',
+              opacity: '70%',
+              bottom: '-175%',
             }}
           ></div>
           <div
             style={{
-              backgroundColor: 'white',
+              backgroundColor: '#4E5AC7',
               height: '300%',
               width: '2.5%',
               transform: `rotate(-${angle}deg)`,
@@ -109,6 +121,18 @@ const Strobelight = (props) => {
               right: '25%',
               opacity: '90%',
               bottom: '-150%',
+            }}
+          ></div>
+          <div
+            style={{
+              backgroundColor: '#B20DED',
+              height: '350%',
+              width: '2.5%',
+              transform: `rotate(-${angle - 15}deg)`,
+              position: 'absolute',
+              right: '25%',
+              opacity: '70%',
+              bottom: '-175%',
             }}
           ></div>
         </>

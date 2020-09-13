@@ -93,7 +93,7 @@ const ProgressApp = () => {
         onClick={() => {
           setSound(!sound);
         }}
-        style={{ position: 'absolute', bottom: '0%' }}
+        style={{ position: 'absolute', bottom: '0%', zIndex: '1000000000' }}
       >
         Open sound
       </button>

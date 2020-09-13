@@ -5,45 +5,62 @@ const ProgressBar = (props) => {
   const [progressDescription, setProgressDescription] = useState(false);
   return (
     <div
-      onMouseEnter={() => {
-        setProgressDescription(true);
-      }}
-      onMouseLeave={() => {
-        setProgressDescription(false);
+      style={{
+        zIndex: '100000000',
+        position: 'absolute',
+        top: '15%',
+        width: '100%',
+        height: '100%',
+        left: '2.5%',
       }}
     >
       <div
         style={{
           width: '25%',
           backgroundColor: 'rgba(165, 55, 253, 1)',
-          borderRadius: "20px",
+          borderRadius: '20px',
           height: '5%',
-          position: 'absolute',
           marginLeft: '1rem',
+        }}
+        onMouseEnter={() => {
+          setProgressDescription(true);
+        }}
+        onMouseLeave={() => {
+          setProgressDescription(false);
         }}
       >
         {props.started ? (
           <div
             style={{
               width: `${(100 * (props.total - props.timeLeft)) / props.total}%`,
-              borderRadius: "20px",
+              borderRadius: '20px',
               height: '100%',
               position: 'relative',
-              background: 'linear-gradient(90deg, rgba(165, 55, 253, 1), rgba(27, 4, 124, 1))',
+              background:
+                'linear-gradient(90deg, rgba(165, 55, 253, 1), rgba(27, 4, 124, 1))',
             }}
           ></div>
         ) : null}
         <img
           style={{
             position: 'absolute',
-            height: '200%',
-            top: '-50%',
-            left: '-10%',
+            // height: '200%',
+            top: '-2.5%',
+            left: '-1%',
+            height: '10%',
+            float: 'left',
           }}
           src={loading}
         />
-        <div style={{ position: 'absolute', left: '50%', top: '25%', color: 'white', }}>
-          {props.timeLeft} <b>{props.song}</b>
+        <div
+          style={{
+            position: 'absolute',
+            left: '15%',
+            top: '1.5%',
+            color: 'white',
+          }}
+        >
+          0:{props.timeLeft} <b>{props.song}</b>
         </div>
       </div>
       {progressDescription ? (
