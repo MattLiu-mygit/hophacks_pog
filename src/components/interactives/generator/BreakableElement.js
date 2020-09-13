@@ -56,6 +56,7 @@ const BreakableElement = (props) => {
           style={{
             ...heartStyles.heart,
             top: `${height}%`,
+            opacity: '85%',
           }}
         >
           <img

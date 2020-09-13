@@ -3,7 +3,7 @@ import ProgressBar from './ProgressBar';
 
 const ProgressApp = () => {
   const [started, setStarted] = useState(30);
-  const [total, setTotal] = useState(30);
+  const total = 30;
   const [playing, setPlaying] = useState('Goldfish');
   const [sound, setSound] = useState(false);
 
@@ -12,7 +12,8 @@ const ProgressApp = () => {
       setTimeout(() => {
         setStarted(started - 1);
       }, 1000);
-    } else if (!sound) {
+    }
+    if (!sound) {
       setStarted(30);
     }
   }, [started, sound]);
@@ -73,6 +74,7 @@ const ProgressApp = () => {
               height: '50%',
               position: 'absolute',
               bottom: '0%',
+              opacity: '60%',
             }}
           ></canvas>
         </div>

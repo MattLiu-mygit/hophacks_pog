@@ -10,7 +10,7 @@ const Screen = () => {
   const [strobe, setStrobe] = useState(false);
 
   return (
-    <div>
+    <div style={{ padding: '2rem' }}>
       <div>
         <GeneratorApp />
       </div>
@@ -27,13 +27,15 @@ const Screen = () => {
         }}
         style={{
           width: '5%',
-          height: '8%',
+          height: '5%',
           color: 'white',
-          backgroundColor: 'rgba(255, 255, 0, 0.5)',
+          backgroundColor: 'rgba(50, 18, 122, 0.5)',
           marginLeft: '0rem',
           position: 'absolute',
           top: '78%',
           zIndex: '9999999',
+          borderRadius: '12px',
+          borderColor: '#ff0090',
         }}
       >
         strobe
