@@ -11,53 +11,60 @@ const Screen = () => {
 
   return (
     <div>
-      <div style = {{
-        width: '100%',
-        height: '11%',
-        background: 'linear-gradient(rgba(165, 55, 253, 1), rgba(165, 55, 253, 0))',
-        position: 'absolute',
-        top: '0%',
-        left: '0%'
-        }}>
-      </div>
-      <div>
-        <GeneratorApp />
-      </div>
-      <Dashboard
-        setNightMode={setNightMode}
-        setStrobe={setStrobe}
-        strobe={strobe}
-      />
-      {strobe ? <Strobelight strobe={strobe} /> : null}
-
-      <button
-        onClick={() => {
-          setStrobe(!strobe);
-        }}
+      <div
         style={{
-          width: '5%',
-          height: '5%',
-          color: 'white',
-          backgroundColor: 'rgba(50, 18, 122, 0.5)',
-          marginLeft: '0rem',
+          width: '100%',
+          height: '25%',
+          backgroundImage:
+            'linear-gradient(to bottom, rgba(165, 55, 253, 1), rgba(0, 0, 0, 0))',
           position: 'absolute',
-          top: '78%',
-          zIndex: '9999999',
-          borderRadius: '12px',
-          borderColor: '#ff0090',
+          top: '0%',
+          left: '0%',
         }}
-      >
-        strobe
-      </button>
-      <ProgressApp />
-      <div style = {{
-      width: '100%',
-      height: '11%',
-      background: 'linear-gradient(rgba(165, 55, 253, 0), rgba(165, 55, 253, 1))',
-      position: 'absolute',
-      bottom: '0%',
-      left: '0%'
-      }}></div>
+      ></div>
+      <div style={{ padding: '2rem' }}>
+        <div>
+          <GeneratorApp />
+        </div>
+        <Dashboard
+          setNightMode={setNightMode}
+          setStrobe={setStrobe}
+          strobe={strobe}
+        />
+        {strobe ? <Strobelight strobe={strobe} /> : null}
+
+        <button
+          onClick={() => {
+            setStrobe(!strobe);
+          }}
+          style={{
+            width: '5%',
+            height: '5%',
+            color: 'white',
+            backgroundColor: 'rgba(50, 18, 122, 0.5)',
+            marginLeft: '0rem',
+            position: 'absolute',
+            top: '78%',
+            zIndex: '9999999',
+            borderRadius: '12px',
+            borderColor: '#ff0090',
+          }}
+        >
+          strobe
+        </button>
+        <ProgressApp />
+      </div>
+      <div
+        style={{
+          width: '100%',
+          height: '25%',
+          background:
+            'linear-gradient(rgba(165, 55, 253, 0), rgba(165, 55, 253, 1))',
+          position: 'absolute',
+          bottom: '0%',
+          left: '0%',
+        }}
+      ></div>
     </div>
   );
 };

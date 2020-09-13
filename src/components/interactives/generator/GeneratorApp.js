@@ -4,6 +4,8 @@ import model1 from './heart.png';
 import poppedHeart from './blackHeart.png';
 import hand from './hand.png';
 import poppedHand from './poppedHand.png';
+import flames from './Fire.gif';
+import purple from './purple.png';
 
 const GeneratorApp = () => {
   const [generatorNum, setGeneratorNum] = useState(0);
@@ -50,7 +52,7 @@ const GeneratorApp = () => {
           }, 100);
         }}
       >
-        <img src={poppedHand} style={{ width: '100%', opacity: '85%' }} />
+        <img src={purple} style={{ width: '100%', opacity: '85%' }} />
       </button>
       {generatorNum === 1 ? (
         <>
@@ -62,11 +64,11 @@ const GeneratorApp = () => {
         </>
       ) : generatorNum === 2 ? (
         <>
+          <Generator pic={purple} popped={poppedHand} />
+          <Generator pic={flames} popped={hand} />
           <Generator pic={hand} popped={poppedHand} />
-          <Generator pic={hand} popped={poppedHand} />
-          <Generator pic={hand} popped={poppedHand} />
-          <Generator pic={hand} popped={poppedHand} />
-          <Generator pic={hand} popped={poppedHand} />
+          <Generator pic={poppedHand} popped={hand} />
+          <Generator pic={flames} popped={hand} />
         </>
       ) : null}
     </div>

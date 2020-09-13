@@ -62,7 +62,7 @@ const BreakableElement = (props) => {
           <img
             src={props.image}
             style={{
-              width: '5vw',
+              width: '3vw',
             }}
           />
         </button>

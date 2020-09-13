@@ -11,7 +11,7 @@ const PoppedHeart = (props) => {
       <img
         src={props.popped}
         style={{
-          width: '5vw',
+          width: '3vw',
           opacity: '85%',
         }}
       />
