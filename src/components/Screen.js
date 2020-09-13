@@ -11,6 +11,15 @@ const Screen = () => {
 
   return (
     <div>
+      <div style = {{
+        width: '100%',
+        height: '11%',
+        background: 'linear-gradient(rgba(165, 55, 253, 1), rgba(165, 55, 253, 0))',
+        position: 'absolute',
+        top: '0%',
+        left: '0%'
+        }}>
+      </div>
       <div>
         <GeneratorApp />
       </div>
@@ -39,6 +48,14 @@ const Screen = () => {
         strobe
       </button>
       <ProgressApp />
+      <div style = {{
+      width: '100%',
+      height: '11%',
+      background: 'linear-gradient(rgba(165, 55, 253, 0), rgba(165, 55, 253, 1))',
+      position: 'absolute',
+      bottom: '0%',
+      left: '0%'
+      }}></div>
     </div>
   );
 };
