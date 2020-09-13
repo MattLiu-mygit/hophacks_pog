@@ -15,7 +15,8 @@ const ProgressBar = (props) => {
       <div
         style={{
           width: '25%',
-          backgroundColor: 'green',
+          backgroundColor: 'rgba(165, 55, 253, 1)',
+          borderRadius: "20px",
           height: '5%',
           position: 'absolute',
           marginLeft: '1rem',
@@ -25,9 +26,10 @@ const ProgressBar = (props) => {
           <div
             style={{
               width: `${(100 * (props.total - props.timeLeft)) / props.total}%`,
-              backgroundColor: 'red',
+              borderRadius: "20px",
               height: '100%',
               position: 'relative',
+              background: 'linear-gradient(90deg, rgba(165, 55, 253, 1), rgba(27, 4, 124, 1))',
             }}
           ></div>
         ) : null}
@@ -40,7 +42,7 @@ const ProgressBar = (props) => {
           }}
           src={loading}
         />
-        <div style={{ position: 'absolute', left: '50%', top: '25%' }}>
+        <div style={{ position: 'absolute', left: '50%', top: '25%', color: 'white', }}>
           {props.timeLeft} <b>{props.song}</b>
         </div>
       </div>

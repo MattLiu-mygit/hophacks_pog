@@ -27,6 +27,7 @@ const ProgressApp = () => {
       let canvas = document.getElementById('analyzer');
       let ctx = canvas.getContext('2d');
       let audio = document.getElementById('audio');
+      audio.volume = 0.5;
       console.log(audio);
       audio.crossOrigin = 'anonymous';
       let audioSrc = context.createMediaElementSource(audio);
